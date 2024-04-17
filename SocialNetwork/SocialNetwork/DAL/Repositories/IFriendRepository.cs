@@ -7,6 +7,8 @@ namespace SocialNetwork.DAL.Repositories
     {
         int Create(FriendEntity friendEntity);
         IEnumerable<FriendEntity> FindAllByUserId(int userId);
+        public IEnumerable<FriendEntity> FindAll();
+
         int Delete(int id);
     }
 }

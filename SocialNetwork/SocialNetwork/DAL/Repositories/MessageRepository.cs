@@ -20,7 +20,7 @@ namespace SocialNetwork.DAL.Repositories
         }
         public IEnumerable<MessageEntity> FindByRecipientId(int recipientId)
         {
-            return Query<MessageEntity>("select*from messages where sender_id=:sender_id", new { recipient_id = recipientId });
+            return Query<MessageEntity>("select*from messages where recipient_id=:recipient_id", new { recipient_id = recipientId });
         }
         public int DeleteById(int messageId)
         {
